@@ -146,7 +146,7 @@ core:
     # The long value of the max direct memory usage. The default max value is -1, representing no limit. The unit is in bytes.
     maxDirectMemoryUsage: ${SW_CORE_MAX_DIRECT_MEMORY_USAGE:-1}
 storage:
-  selector: ${SW_STORAGE:elasticsearch}
+  selector: ${SW_STORAGE:mysql}
   banyandb:
     # Since 10.2.0, the banyandb configuration is separated to an independent configuration file: `bydb.yaml`.
   elasticsearch:
@@ -194,9 +194,9 @@ storage:
     enableCustomRouting: ${SW_STORAGE_ES_ENABLE_CUSTOM_ROUTING:false}
   mysql:
     properties:
-      jdbcUrl: ${SW_JDBC_URL:"jdbc:mysql://localhost:3306/swtest?rewriteBatchedStatements=true&allowMultiQueries=true"}
+      jdbcUrl: ${SW_JDBC_URL:"jdbc:mysql://10.8.130.32:3306/skywalking?rewriteBatchedStatements=true&allowMultiQueries=true"}
       dataSource.user: ${SW_DATA_SOURCE_USER:root}
-      dataSource.password: ${SW_DATA_SOURCE_PASSWORD:root@1234}
+      dataSource.password: ${SW_DATA_SOURCE_PASSWORD:root}
       dataSource.cachePrepStmts: ${SW_DATA_SOURCE_CACHE_PREP_STMTS:true}
       dataSource.prepStmtCacheSize: ${SW_DATA_SOURCE_PREP_STMT_CACHE_SQL_SIZE:250}
       dataSource.prepStmtCacheSqlLimit: ${SW_DATA_SOURCE_PREP_STMT_CACHE_SQL_LIMIT:2048}

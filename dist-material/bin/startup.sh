@@ -15,7 +15,9 @@
 # limitations under the License.
 
 #!/usr/bin/env sh
-
+# # 设置 JDK 17 的路径/usr/local/jdk-17.0.12
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
 PRG="$0"
 PRGDIR=`dirname "$PRG"`
 OAP_EXE=oapService.sh
